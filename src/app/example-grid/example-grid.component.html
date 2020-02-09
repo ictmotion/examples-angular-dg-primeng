@@ -1,0 +1,26 @@
+
+
+<br/><br/>
+
+<p-table [resizableColumns]="true" [value]="moneyTransactions">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Amount</th>
+            <th>BankAccountFrom</th>
+            <th >BankAccountTo</th>
+            <th>CurrencyCode</th>
+            <th>Description</th>
+            <th>TimeStamp</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-moneyTransaction>
+        <tr>
+            <td>{{moneyTransaction.Amount}}</td>
+            <td>{{moneyTransaction.BankAccountFrom}}</td>
+            <td>{{moneyTransaction.BankAccountTo}}</td>
+            <td>{{moneyTransaction.CurrencyCode}}</td>
+            <td>{{moneyTransaction.Description}}</td>
+            <td>{{moneyTransaction.TimeStamp}}</td>
+        </tr>
+    </ng-template>
+</p-table>
